@@ -184,6 +184,8 @@ contract NounFour is ERC721("NounFour", "N4"), ERC721TokenReceiver {
             revert NounIdDoesNotMatch();
         }
 
+        delete partInfo[id];
+
         _burn(id);
     }
 
